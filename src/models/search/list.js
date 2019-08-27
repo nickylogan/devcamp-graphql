@@ -4,7 +4,7 @@ const list = (_, args) => {
   const { page, perPage, q } = args;
   
   // Search simple string
-  const dataFiltered = listItem.filter(item => item.name.toLowerCase().includes(q.toLowerCase()));
+  const dataFiltered = listItem.filter(item => item.name.toLowerCase().includes(q && q.toLowerCase()));
   
   // Pagination 
   const result = paginate(dataFiltered, perPage, page)

@@ -21,9 +21,9 @@ app.use('/graphql', bodyParser.json(), graphqlExpress({
 }));
 
 // if (process.env.NODE_ENV === 'dev') {
-  app.use('/graphiql', graphiqlExpress({
-    endpointURL: '/graphql',
-  }));
+app.use('/graphiql', graphiqlExpress({
+  endpointURL: '/graphql',
+}));
 // }
 
 app.listen(PORT, () => {
